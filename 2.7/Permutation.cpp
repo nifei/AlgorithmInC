@@ -56,7 +56,7 @@ void Permutation3(int* array, int len)
     std::srand(std::time(0));
     for (int i = 0; i < len; i++)
     {
-        int rand = std::rand()%len;
+        int rand = std::rand()%(i+1);
         std::swap(array[i], array[rand]);
     }
 }
@@ -82,7 +82,7 @@ int main(int argc, char** argv)
     printf("Permutation:");
     for (int i = 0; i < count; i++)
     {
-//        printf("%d ", array[i]);
+        printf("%d ", array[i]);
     }
     printf("\n");
     delete []array;
